@@ -1,7 +1,6 @@
 <div
 *ngIf="
   sessao$ | async as sessao;
-  else menuNaoLogado
 "
 >
 Olá {{ sessao.nome }}!
@@ -11,6 +10,3 @@ Olá {{ sessao.nome }}!
 >
 </div>
 <router-outlet></router-outlet>
-<ng-template #menuNaoLogado>
-usuário não logado
-</ng-template>
