@@ -1,0 +1,28 @@
+#container {
+    width: 80%;
+}
+
+.popup {
+    width: 100%;
+}
+
+.radio-genero {
+    margin: 0%;
+    display: flex;
+    position: absolute;
+    align-items: baseline;
+}
+
+.header-cadastro {
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.header-cadastro button{
+    width: 30px;
+}
+
+td button {
+    background-color: transparent;
+    color: black;
+}

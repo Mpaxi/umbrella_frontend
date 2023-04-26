@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "umbrella-web": {
+    "umbrella-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/umbrella-web",
+            "outputPath": "dist/umbrella-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "umbrella-web:build:production"
+              "browserTarget": "umbrella-frontend:build:production"
             },
             "development": {
-              "browserTarget": "umbrella-web:build:development"
+              "browserTarget": "umbrella-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "umbrella-web:build"
+            "browserTarget": "umbrella-frontend:build"
           }
         },
         "test": {

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="popup">
+        <h3>{{ titulo }}</h3>
+        <form [formGroup]="form">
+            <label for="m-nome">Nome</label>
+            <input id="m-nome" name="m-nome" type="text" formControlName="nome" />
+
+            <label for="m-cpf">CPF (apenas numeros)</label>
+            <input id="m-cpf" name="m-cpf" type="text" formControlName="cpf"/>
+
+            <label for="m-email">E-mail</label>
+            <input id="m-email" name="m-email" type="email" formControlName="email"/>
+
+            <label for="m-senha">Senha</label>
+            <input id="m-senha" name="m-senha" type="password" formControlName="senha"/>
+
+            <label for="m-senha">Confirme sua senha</label>
+            <input id="m-confimaSenha" name="m-confimaSenha" type="password" formControlName="confirmaSenha"/>
+
+            <label for="m-cargo">Cargo</label>
+            <select id="m-cargo" name="m-cargo" formControlName="cargo">
+                <option value="">Selecione...</option>
+                <option value="admin">Admin</option>
+                <option value="estoquista">Estoquista</option>
+            </select>
+            <button (click)="salvar()" id="btnSalvar">Salvar</button>
+        </form>
+    </div>
+</div>
