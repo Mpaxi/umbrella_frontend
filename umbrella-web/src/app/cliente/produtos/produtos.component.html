@@ -1,0 +1,14 @@
+<section class="product-list">
+    <div class="product-list__card" *ngFor="let produto of products">
+        <a routerLink="{{ produto.id }}" class="product--list__link">
+            <img src="https://www.latercera.com/resizer/hEjow2UdFbe4hwUoavCHluhI-N8=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/MRZ2PMD27ZEVFNHZDFS4NRHBN4.jpg">
+            <h2 class="product-item__name">
+                {{ produto.name }}
+            </h2>
+            <p class="product-item__price">
+                {{ produto.price | currency: "BRL" }}
+            </p>
+            <button class="product-item__buy-button" type="button">Comprar</button>
+        </a>
+    </div>
+</section>

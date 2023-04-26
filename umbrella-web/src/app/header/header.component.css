@@ -1,0 +1,10 @@
+button{
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #252525;
+}

@@ -1,0 +1,35 @@
+<!-- Main -->
+<section class="container-user">
+    <div class="user-container">
+
+        <div class="form-container">
+            <div class="header-cadastro">
+                <span>Cadastro de Funcionários</span>
+                <button routerLink="/backoffice/usuarios/inserir" id="new" class="material-symbols-outlined">add</button>
+            </div>
+            <!-- 1 -->
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Cargo</th>
+                            <th>Situação</th>
+                            <th class="acao">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let usuario of usuarios">
+                            <td>{{ usuario.nome }}</td>
+                            <td>{{ usuario.userName }}</td>
+                            <td>{{ usuario.roles }}</td>
+                            <td><input class="check-situacao" id="check-situacao-{{usuario.id}}" type="checkbox" [checked]="!usuario.lockoutEnabled" (click)="checkValue(usuario)"></td>
+                            <td><button (click)="editarUsuario(usuario.id)"><span class="material-symbols-outlined">edit</span></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

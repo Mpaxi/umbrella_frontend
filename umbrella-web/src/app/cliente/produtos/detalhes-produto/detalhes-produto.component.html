@@ -1,0 +1,18 @@
+<section class="product__container">
+    <div class="product-image__container">
+        <img src="https://www.latercera.com/resizer/hEjow2UdFbe4hwUoavCHluhI-N8=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/MRZ2PMD27ZEVFNHZDFS4NRHBN4.jpg">
+    </div>
+    <div class="product-description__container">
+        <h2 class="product__name">{{ produto?.name }}</h2>
+        <p>{{ produto?.description }}</p>
+        <h3 class="product__price">{{ produto?.price | currency: "BRL"}}</h3>
+        <p>Estoque Disponível: </p>
+        <label>
+            Quantidade
+            <input type="number" [(ngModel)]="quantidade" min="1">
+            Unidades
+        </label>
+        <p class="product__aviability">{{ produto?.unit }} unidade(s) em estoque</p>
+        <button>Adicionar ao Carrinho</button>
+    </div>
+</section>

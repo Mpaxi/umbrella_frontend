@@ -1,0 +1,36 @@
+<div class="popup">
+    <h2>Dados do usuario</h2>
+    <form>
+        <label for="m-name">Nome </label>
+        <input type="text" id="m-name" name="m-name" [value]="this.user?.nome">
+
+        <label for="m-dtNascimeto">Data de Nascimento </label>
+        <input type="date">
+
+        <div class="radio-genero">
+            <label for="m-input">Genero: </label>
+            <input type="text" hidden>
+
+            <input type="radio" name="m-genero" id="masc" value="masculino">
+            <label for="masc">Masculino</label>
+
+            <input type="radio" name="m-genero" id="fem" value="feminino">
+            <label for="fem">feminino</label>
+
+            <input type="radio" name="m-genero" id="outro" value="outro">
+            <label for="outro">Outro</label>
+        </div>
+
+        <div class="header-cadastro">
+            <span>Endereço</span>
+            <button (click)="inserirEndereco()" class="material-symbols-outlined" id="new">add</button>
+        </div>
+        <table>
+            <tr *ngFor="let endereco of address">
+                <td><input type="radio" name="m-endereco-1" [checked]="endereco.default"></td>
+                <td><p>{{ endereco.address }}, {{ endereco.houseNumber }} <br> {{ endereco.district }} <br> {{ endereco.zipCode }}</p></td>
+                <td><button (click)="deletarEndereco(endereco.id)"><span class="material-symbols-outlined">delete</span></button></td>
+            </tr>
+        </table>
+    </form>
+</div>

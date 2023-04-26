@@ -1,0 +1,47 @@
+<div>
+    <aside class="sidebar">
+        <header>
+
+        </header>
+        <!-- Menu 1 -->
+        <button (click)="handleHeaderClicked('tools')">
+            <span class="material-symbols-outlined"> inventory </span>
+            <span>Produtos</span>
+            <span class="material-symbols-outlined"> expand_more </span>
+        </button>
+        <div id="tools" class="subnav">
+            <div class="subnav-inner">
+                <button [routerLink]="[{ outlets: { subcontainer: ['produtos'] } }]">
+                    <span>Buscar Produto</span>
+                </button>
+                <button [routerLink]="[{ outlets: { subcontainer: ['produtos/inserir'] } }]">
+                    <span>Adicionar Produto</span>
+                </button>
+            </div>
+        </div>
+        <!-- Menu 2 -->
+        <button (click)="handleHeaderClicked('settings')">
+            <span class="material-symbols-outlined"> badge </span>
+            <span>Usuarios</span>
+            <span class="material-symbols-outlined"> expand_more </span>
+        </button>
+        <div id="settings" class="subnav">
+            <div class="subnav-inner">
+                <button routerLink="/backoffice/usuarios">
+                    <span>Listar Usuarios</span>
+                </button>
+                <button routerLink="/backoffice/usuarios/inserir">
+                    <span>Cadastrar Novo usuario</span>
+                </button>
+            </div>
+        </div>
+        <button>
+            <span class="material-symbols-outlined"> account_circle </span>
+            <span>Profile</span>
+        </button>
+        <button>
+            <span class="material-symbols-outlined"> logout </span>
+            <span>Sair</span>
+        </button>
+    </aside>
+</div>

@@ -1,12 +1,4 @@
-<div
-*ngIf="
-  sessao$ | async as sessao;
-"
->
-Olá {{ sessao.nome }}!
-<a routerLink="/home">Home</a> |
-<a routerLink="/login" (click)="logout()"
-  >Logout</a
->
+<app-header></app-header>
+<div class="container">
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
